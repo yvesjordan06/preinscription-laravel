@@ -156,11 +156,10 @@ class EtudiantController extends Controller
         $code=$request->get('code');
 
         $etudiant=Etudiant::findOrFail($code);
-        if($etudiant) {
 
-            return view('fiche',['etudiant'=> $etudiant]);
-        }
-        return back();
+
+        return view('fiche',['etudiant'=> $etudiant]);
+
     }
 
     /**
